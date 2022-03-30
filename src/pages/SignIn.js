@@ -30,7 +30,7 @@ function SignIn() {
         navigate('/index')
       }
     } catch (error) {
-      toast.error('Bad user credentials')
+      toast.error('error')
     }
   }
   return (
