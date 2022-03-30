@@ -27,7 +27,7 @@ function SignIn() {
       const auth = getAuth()
       const userCredentials = await signInWithEmailAndPassword(auth, email, password)
       if(userCredentials.user){
-        navigate('/')
+        navigate('/index')
       }
     } catch (error) {
       toast.error('Bad user credentials')
@@ -38,7 +38,7 @@ function SignIn() {
     <div className="pageContainer">
       <header>
       <p className="pageHeader">
-        Welcome Back!
+        Welcome Renthouse! 
       </p>
       </header>
         <form onSubmit={onSubmit}>

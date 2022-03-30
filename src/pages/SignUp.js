@@ -66,6 +66,7 @@ function SignUp() {
           {/* <Link to='/forgot-password' className='forgotPasswordLink' >Forgot Password</Link> */}
           <div className="signUpBar">
             <p className="signUpText">
+          
               <button className='signUpButton'><ArrowRightIcon fill='white' width='34px' height='34px'/> </button>
             </p>
           </div>
