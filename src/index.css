@@ -85,14 +85,7 @@ button {
   right: 20px;
 }
 
-.pageContainer,
-.offers,
-.profile,
-.listingDetails,
-.category,
-.explore {
-  margin: 1rem;
-}
+
 @media (min-width: 1024px) {
   .pageContainer,
   .offers,
