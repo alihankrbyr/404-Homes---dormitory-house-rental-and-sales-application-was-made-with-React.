@@ -69,7 +69,7 @@ function CreateListing() {
         if (geoLocationEnabled) {
 
             const headers = {
-                'Authorization': "prj_test_pk_7ca77fca54d1c58fb89215e0bbe6d6345f93605f"
+                'Authorization': "prj_test_pk_ec3bbf574840451b663860ae7b7e1f64c93999a1"
             }
             const response = await fetch(`https://api.radar.io/v1/geocode/forward?query=${address}`, { headers })
             const data = await response.json()

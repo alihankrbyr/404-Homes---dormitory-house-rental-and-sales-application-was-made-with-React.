@@ -3,11 +3,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import {getDoc, doc} from 'firebase/firestore'
 import {getAuth} from 'firebase/auth'
 import {db} from '../firebase.config'
+
 import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import Spinner from '../components/Spinner'
 import shareIcon from '../assets/svg/shareIcon.svg'
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 function Listing() {
@@ -21,6 +23,7 @@ function Listing() {
     useEffect(() => {
       const fetchListing = async()=>{
         const docRef = doc(db, 'listings', params.listingId)
+        
         const snap = await getDoc(docRef)
         if(snap.exists()){
             setListing(snap.data())
