@@ -6,6 +6,9 @@ import {db} from '../firebase.config'
 import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
 import Spinner from './Spinner'
 import { SwiperSlide,Swiper} from 'swiper/react'
+import İmage from '../assets/svg/ev.jpeg'
+import İmage2 from '../assets/svg/ev.jpeg'
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 function Slider() {
     const [loading, setLoading] = useState(true)
@@ -37,8 +40,9 @@ function Slider() {
     }
   return (
     <>
-    {/* <p className="exploreHeading">Recommended</p> */}
+    {/* <p className="exploreHeading">Recommended</p> */} {/*
     <Swiper slidesPerView={1} pagination={{clickable:true}}>
+       
         {listing.map(({data, id})=>{
             return(
 
@@ -50,6 +54,23 @@ function Slider() {
                 </SwiperSlide>
             )
         })}
+   
+        </Swiper> */}
+        {/*  test for home page without api data  */}
+        <Swiper> 
+              <SwiperSlide>
+                    <div className="swiperSlideDiv">
+                    <img src={İmage} alt="this is home image" /> 
+                    <p className="swiperSlideText">{'50.000₺'}</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="swiperSlideDiv">
+                    <img src={İmage2} alt="this is home image" /> 
+                    <p className="swiperSlideText">{'50.000₺'}</p>
+                         
+                    </div>
+                </SwiperSlide>
         </Swiper>
     </>
   )

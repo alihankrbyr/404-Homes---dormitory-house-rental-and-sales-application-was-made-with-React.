@@ -39,16 +39,20 @@ function Listing() {
  
 if(loading){
     return <Spinner/>
-}
+}   
   return (
     <main>
-        <Swiper slidesPerView={1} pagination={{clickable:true}}>
+        <div style={{ 
+      backgroundImage: `url("https://via.placeholder.com/500")` 
+    }}> </div>
+      <Swiper slidesPerView={1} pagination={{clickable:true}}>
             {listing.imageUrls.map((url,index)=>{
                 return (<SwiperSlide key={index}>
-                    <div style={{background:`url(${listing.imageUrls[index]}) center no-repeat`, backgroundSize: 'cover'}} className="swiperSlideDiv"></div>
+             {{/*       <div style={{background: `url(${listing.imageUrls[index]}) center no-repeat`, backgroundSize: 'cover'}} className="swiperSlideDiv"></div> */}}
+          
                 </SwiperSlide>
             )})}
-            </Swiper>
+            </Swiper> 
         <div className="shareIconDiv" onClick={()=>{navigator.clipboard.writeText(window.location.href)
         setSharedLinkCopied(true)
         setTimeout(() => {

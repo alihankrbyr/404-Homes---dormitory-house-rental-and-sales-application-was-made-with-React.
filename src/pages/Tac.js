@@ -9,7 +9,7 @@ export default class Tac extends Component {
       <div className='category'>
         <header>
             <p className="pageHeader">
-            Terms and Conditions  for test victoria
+            Terms and Conditions
             </p>
             <>
             <Card style={{ width: '18rem' }}>
