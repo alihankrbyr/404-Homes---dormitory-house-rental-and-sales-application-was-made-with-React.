@@ -4,7 +4,7 @@ import {ReactComponent as OfferIcon} from '../assets/svg/localOfferIcon.svg'
 import {ReactComponent as ExploreIcon} from '../assets/svg/exploreIcon.svg'
 import {ReactComponent as PersonOutlineIcon} from '../assets/svg/personOutlineIcon.svg'
 import {ReactComponent as TacIcon} from '../assets/svg/TacIcon.svg'
-
+import {ReactComponent as Contact} from '../assets/svg/contact.svg'
 import '../index.css'
 
 
@@ -34,7 +34,7 @@ function Navbar() {
                    <p className={changeColor('/Tac')?'navbarListItemNameActive':'navbarListItem'}>TAC</p>
                </li>
                <li className='navbarListItem'  onClick={()=>navigate('/ContactUs')}>
-                   <TacIcon fill={changeColor('/ContactUs')?'#1f1f1f':'#4e4e4e'} width='36px' height='36px'/>
+                   <Contact fill={changeColor('/ContactUs')?'#1f1f1f':'#4e4e4e'} width='36px' height='36px'/>
                    <p className={changeColor('/ContactUs')?'navbarListItemNameActive':'navbarListItem'}>contact</p>
                </li>
                <li className='navbarListItem'  onClick={()=>navigate('/profile')}>
