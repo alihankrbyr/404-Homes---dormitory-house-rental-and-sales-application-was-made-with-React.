@@ -1,5 +1,4 @@
-{
-	"listings": [
+[
 		{
 			"name": "Beautiful Stratford Condo",
 			"type": "rent",
@@ -16,7 +15,7 @@
 				"lat": "41.205590",
 				"lng": "-73.150530"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		},
 		{
@@ -34,7 +33,7 @@
 				"lat": "34.1851",
 				"lng": "-83.9252"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		},
 		{
@@ -53,7 +52,7 @@
 				"lat": "39.144320",
 				"lng": "-84.569630"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		},
 		{
@@ -72,7 +71,7 @@
 				"lat": "35.628690",
 				"lng": "-78.455520"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		},
 		{
@@ -90,7 +89,7 @@
 				"lat": "42.247270",
 				"lng": "-71.053470"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		},
 		{
@@ -109,8 +108,7 @@
 				"lat": "26.209080",
 				"lng": "-80.112100"
 			},
-			"imageUrls": [],
+			"imageUrls": ["https://placehold.co/120x120"],
 			"timestamp": "00:00:00"
 		}
 	]
-}

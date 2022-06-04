@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import { Card,CardImg,Row,Button,Col,Form} from 'react-bootstrap';
-
+import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 export default class ContactUs extends Component {
 
 
@@ -60,9 +61,15 @@ export default class ContactUs extends Component {
                     ></textarea>
                   </div>
                 </div>
-                <Button variant="primary" className='' type='submit'>
-                  Submit
-                </Button>
+               
+          <div className="signInBar">
+            <p className="signInText">Send Message</p>
+            <Link to='/profile' className='forgotPasswordLink' ><button className='signInButton'><ArrowRightIcon fill='white' width='45px' height='44px'/> </button></Link>
+          </div>
+        
+        
+        
+                
               </form>
             </div>
           </div>

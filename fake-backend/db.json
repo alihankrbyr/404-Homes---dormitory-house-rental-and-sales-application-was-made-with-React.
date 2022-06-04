@@ -1,0 +1,166 @@
+{
+  "listings": [
+    {
+      "name": "Beautiful Stratford Condo",
+      "type": "rent",
+      "userRef": "ID OF A USER",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": true,
+      "furnished": true,
+      "offer": true,
+      "regularPrice": 2500,
+      "discountedPrice": 2000,
+      "location": "8601 West Peachtree St Stratford, CT 06614",
+      "geolocation": {
+        "lat": "41.205590",
+        "lng": "-73.150530"
+      },
+      "imageUrls": [
+        "https://media.istockphoto.com/photos/for-rent-sign-in-front-of-new-house-picture-id149060607?k=20&m=149060607&s=612x612&w=0&h=To8zlQbIQ66ep7g-C-19aAFi2CdK98sFnLdSWL8zrl4="
+      ],
+      "timestamp": "00:00:00"
+    },
+    {
+      "name": "Flowery Branch Beauty",
+      "type": "sale",
+      "userRef": "ID OF A USER",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "parking": true,
+      "furnished": false,
+      "offer": false,
+      "regularPrice": 650000,
+      "location": "517 High Ridge St Flowery Branch, GA 30542",
+      "geolocation": {
+        "lat": "34.1851",
+        "lng": "-83.9252"
+      },
+      "imageUrls": [
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.trulia.com%2Fpictures%2Fthumbs_6%2Fzillowstatic%2Ffp%2F3a63eaa6276dd31435a84c453177fca2-full.jpg&f=1&nofb=1"
+      ],
+      "timestamp": "00:00:00"
+    },
+    {
+      "name": "Brand New Cincinnati Home",
+      "type": "dorm",
+      "userRef": "ID OF A USER",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": true,
+      "furnished": false,
+      "offer": true,
+      "regularPrice": 700000,
+      "discountedPrice": 690000,
+      "location": "9814B Cedar Swamp Street Cincinnati, OH 45211",
+      "geolocation": {
+        "lat": "39.144320",
+        "lng": "-84.569630"
+      },
+      "imageUrls": [
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftabloidsehati.com%2Fwp-content%2Fuploads%2F2020%2F05%2FSingle-Family-Houses-For-Rent-By-Owner.jpg&f=1&nofb=1"
+      ],
+      "timestamp": "00:00:00"
+    },
+    {
+      "name": "Classy Home In Clayton",
+      "type": "sale",
+      "userRef": "ID OF A USER",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "parking": true,
+      "furnished": false,
+      "offer": true,
+      "regularPrice": 720000,
+      "discountedPrice": 670000,
+      "location": "7644 Carswold Dr Clayton, MO, 63105",
+      "geolocation": {
+        "lat": "35.628690",
+        "lng": "-78.455520"
+      },
+      "imageUrls": [
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fuserdroid.com%2Fwp-content%2Fuploads%2F2020%2F04%2FPrivate-Landlords-Rentals.jpg&f=1&nofb=1"
+      ],
+      "timestamp": "00:00:00"
+    },
+    {
+      "name": "House For Rent In Milton",
+      "type": "sale",
+      "userRef": "ID OF A USER",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": true,
+      "furnished": false,
+      "offer": false,
+      "regularPrice": 630000,
+      "location": "810 North Lyme Drive Milton, MA 02186",
+      "geolocation": {
+        "lat": "42.247270",
+        "lng": "-71.053470"
+      },
+      "imageUrls": [
+        "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fuserdroid.com%2Fwp-content%2Fuploads%2F2020%2F04%2FMyrtle-Beach-Homes-For-Sale-1024x768.jpg&f=1&nofb=1"
+      ],
+      "timestamp": "00:00:00"
+    },
+    {
+      "name": "Modern 3BR Apartment In FL",
+      "type": "rent",
+      "userRef": "ID OF A USER",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": true,
+      "furnished": true,
+      "offer": true,
+      "regularPrice": 2300,
+      "discountedPrice": 1900,
+      "location": "11 Buttonwood Street Fort Lauderdale, FL 33308",
+      "geolocation": {
+        "lat": "26.209080",
+        "lng": "-80.112100"
+      },
+      "imageUrls": [
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclassifieds.craigclassifiedads.com%2Fimages%2F2019%2F10%2F19%2F695300%2Fhouse-for-rent-in-milton_1.jpg&f=1&nofb=1"
+      ],
+      "timestamp": "00:00:00"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userRef": 1,
+      "name": "Alihan",
+      "Password": "test"
+    },
+    {
+      "id": 2,
+      "userRef": 2,
+      "name": "Alihan1",
+      "Password": "test1"
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    }
+  ]
+}

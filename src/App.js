@@ -6,6 +6,10 @@ import TAC from './pages/Tac';
 import ContactUs from './pages/ContactUs';
 import ForgotPassword from './pages/ForgotPassword';
 import Offers from './pages/Offers';
+import Test from './pages/Postlist';
+import PostForm from './pages/PostForm';
+import Data from './pages/data';
+import Table from './pages/table';
 import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -29,7 +33,11 @@ function App() {
        <Route path='/category/:categoryName' element={<Category/>}/>     
        <Route path='/profile' element={<PrivateRoute/>}>
         <Route path='/profile' element={<Profile/>}/>
-       </Route>
+       </Route> 
+       <Route path='/test' element={<Test/>}/>
+       <Route path='/postForm' element={<PostForm/>}/>
+       <Route path='/data' element={<Data/>}/>
+       <Route path='/table' element={<Table/>}/>
        <Route path='/Sign-in' element={<SignIn/>}/>
        <Route path='/Sign-up' element={<SignUp/>}/>
        <Route path='/forgot-password' element={<ForgotPassword/>}/>

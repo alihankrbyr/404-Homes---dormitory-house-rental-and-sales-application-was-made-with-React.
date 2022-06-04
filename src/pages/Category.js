@@ -5,6 +5,7 @@ import {db} from '../firebase.config'
 import {toast} from 'react-toastify'
 import Spinner from '../components/Spinner'
 import ListingItem from '../components/ListingItem'
+
 function Category() {
     const [loading, setLoading] = useState(true)
     const [lastListing, setLastListing] = useState(null)
@@ -72,7 +73,12 @@ function Category() {
     <div className='category'>
         <header>
             <p className="pageHeader">
-                {params.categoryName==='rent'?'Places for Rent': 'Places for sale'}
+            {params.categoryName==='rent'?'Places for Rent':
+             params.categoryName==='sale'?'Places for Sale':
+             params.categoryName==='Dorm'?'Places for Dorm':'Something Wrong'}
+
+                
+                {console.log(params.categoryName)}
             </p>
         </header>
         {loading?<Spinner/> : listings && listings.length>0?

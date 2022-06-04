@@ -9,7 +9,7 @@ import Spinner from '../components/Spinner'
 import { toast } from 'react-toastify'
 
 function CreateListing() {
-    const [geoLocationEnabled, setGeoLocationEnabled] = useState(true)
+    const [geoLocationEnabled] = useState(true)
     const [formData, setFormData] = useState({
         type: 'rent',
         name: '',
@@ -19,7 +19,7 @@ function CreateListing() {
         furnished: false,
         address: '',
         offer: false,
-        regularPrice: 0,
+        regularPrice: 10000,
         discountedPrice: 0,
         images: {},
         latitude: 0,
@@ -97,7 +97,7 @@ function CreateListing() {
                 const uploadTask = uploadBytesResumable(storageRef, image);
                 uploadTask.on('state_changed',
                     (snapshot) => {
-                        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 10000;
                         console.log('Upload is ' + progress + '% done');
                         switch (snapshot.state) {
                             case 'paused':
@@ -341,7 +341,7 @@ function CreateListing() {
                                 id='regularPrice'
                                 value={regularPrice}
                                 onChange={onMutate}
-                                min='50'
+                                min='1'
                                 max='750000000'
                                 required
                             />
@@ -357,7 +357,7 @@ function CreateListing() {
                                     id='discountedPrice'
                                     value={discountedPrice}
                                     onChange={onMutate}
-                                    min='50'
+                                    min='1'
                                     max='750000000'
                                     required={offer}
                                 />

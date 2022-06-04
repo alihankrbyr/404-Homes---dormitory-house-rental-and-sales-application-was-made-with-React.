@@ -1,0 +1,13 @@
+{
+  "name": "fake-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server":"json-server --watch db.json  "
+
+
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,24 @@
+[
+{"type":"header","version":"5.0.3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"404homes"},
+{"type":"table","name":"geolocation","database":"404homes","data":
+[
+
+]
+}
+,{"type":"table","name":"list","database":"404homes","data":
+[
+
+]
+}
+,{"type":"table","name":"listing","database":"404homes","data":
+[
+
+]
+}
+,{"type":"table","name":"users","database":"404homes","data":
+[
+
+]
+}
+]
