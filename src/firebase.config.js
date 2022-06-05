@@ -8,14 +8,14 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 const firebaseConfig = {
 
-    apiKey: "AIzaSyBxqCSj7aZqcspUgQkP7DV-LYZjrveLy5Y",
-    authDomain: "grp-4-e8ca2.firebaseapp.com",
-    databaseURL: "https://grp-4-e8ca2-default-rtdb.firebaseio.com",
-    projectId: "grp-4-e8ca2",
-    storageBucket: "grp-4-e8ca2.appspot.com",
-    messagingSenderId: "660410509750",
-    appId: "1:660410509750:web:03318889d4837a63aaf917",
-    measurementId: "G-P46TFD2H37"
+    apiKey: "AIzaSyDFzQlv9ABL1aPNvXm6axRPxZYryMLpyiE",
+  authDomain: "homes-rp4.firebaseapp.com",
+  databaseURL: "https://homes-rp4-default-rtdb.firebaseio.com",
+  projectId: "homes-rp4",
+  storageBucket: "homes-rp4.appspot.com",
+  messagingSenderId: "579818334029",
+  appId: "1:579818334029:web:c18863267372195c533904",
+  measurementId: "G-1JS1Z5FC9P"
   
 };
 
