@@ -72,7 +72,9 @@ function Category() {
     <div className='category'>
         <header>
             <p className="pageHeader">
-                {params.categoryName==='rent'?'Places for Rent': 'Places for sale'}
+            {params.categoryName==='rent'?'Places for Rent':
+params.categoryName==='sale'?'Places for Sale':
+params.categoryName==='dorm'?'Places for Dorm':'Something Wrong'}
             </p>
         </header>
         {loading?<Spinner/> : listings && listings.length>0?

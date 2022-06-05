@@ -176,10 +176,11 @@ function CreateListing() {
                 <p className="pageHeader">Create Listing</p>
                 <main>
                     <form onSubmit={onSubmit}>
-                        <label className='formLabel'>Sell / Rent</label>
+                        <label className='formLabel'>Sell / Rent / Dorm</label>
                         <div className="formButtons">
                             <button type='button' className={type === 'sale' ? 'formButtonActive' : 'formButton'} id='type' value='sale' onClick={onMutate}>Sell</button>
                             <button type='button' className={type === 'rent' ? 'formButtonActive' : 'formButton'} id='type' value='rent' onClick={onMutate}>Rent</button>
+                            <button type='button' className={type === 'dorm' ? 'formButtonActive' : 'formButton'} id='type' value='dorm' onClick={onMutate}>Dorm</button>
                         </div>
                         <label className='formLabel'>Name</label>
                         <input

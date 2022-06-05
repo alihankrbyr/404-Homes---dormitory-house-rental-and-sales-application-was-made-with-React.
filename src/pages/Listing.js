@@ -63,7 +63,12 @@ if(loading){
             <p className="listingLocation">
                 {listing.address}
             </p>
-            <p className="listingType">For {listing.type==='rent'?'Rent':'Sale'}</p>
+            <p className="listingType">For  {listing.type==='rent'?'Rent':
+listing.type==='sale'?'Sale':
+listing.type==='dorm'?'Dorm':'Something Wrong'}</p>
+
+           
+
             {listing.offer &&(
                 <p className='discountedPrice'>&#8377;{listing.regularPrice - listing.discountedPrice} discount</p>
             )}
