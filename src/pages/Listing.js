@@ -40,7 +40,7 @@ if(loading){
   return (
     <main>
         <Swiper slidesPerView={1} pagination={{clickable:true}}>
-            {listing.imageUrls.map((url,index)=>{
+            {listing.imageUrls.map((_url,index)=>{
                 return (<SwiperSlide key={index}>
                     <div style={{background:`url(${listing.imageUrls[index]}) center no-repeat`, backgroundSize: 'cover'}} className="swiperSlideDiv"></div>
                 </SwiperSlide>

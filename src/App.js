@@ -2,6 +2,8 @@ import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Explore from './pages/Explore';
+import TAC from './pages/Tac';
+import ContactUs from './pages/ContactUs';
 import ForgotPassword from './pages/ForgotPassword';
 import Offers from './pages/Offers';
 import Profile from './pages/Profile';
@@ -22,6 +24,8 @@ function App() {
      <Routes>
        <Route path='/' element={<Explore/>}/>
        <Route path='/offers' element={<Offers/>}/>
+       <Route path='/Tac'  element={<TAC/>}/>
+      <Route path='/ContactUs'  element={<ContactUs/>}/>
        <Route path='/category/:categoryName' element={<Category/>}/>
        <Route path='/profile' element={<PrivateRoute/>}>
         <Route path='/profile' element={<Profile/>}/>
