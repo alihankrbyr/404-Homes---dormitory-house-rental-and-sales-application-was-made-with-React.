@@ -57,27 +57,30 @@ if(loading){
         {sharedLinkCopied && <p className='linkCopied'>Link Copied!</p>}
         <div className="listingDetails">
             <p className="listingName">
-                {listing.name}- &#8377;{listing.offer? listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
-                    :listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+                {listing.name}- {listing.offer? listing.regularPrice - listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
+                    :listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')} &#8364;
             </p>
             <p className="listingLocation">
                 {listing.address}
             </p>
             <p className="listingType">For  {listing.type==='rent'?'Rent':
-listing.type==='sale'?'Sale':
-listing.type==='dorm'?'Dorm':'Something Wrong'}</p>
+         listing.type==='sale'?'Sale':
+         listing.type==='dorm'?'Dorm':'Something Wrong'}</p>
 
            
 
             {listing.offer &&(
-                <p className='discountedPrice'>&#8377;{listing.regularPrice - listing.discountedPrice} discount</p>
+                <p className='Regular Price'>{' Regular Price -'}{listing.regularPrice}&#8364; <br></br>{'Discounted Price - '} {listing.discountedPrice}&#8364; </p>
+                
+                
+                
             )}
             <ul className="listingDetailList">
                 <li>
-                    {listing.bedrooms>1?`${listing.bedrooms} Bedrooms`:'1 Bedroom'}
+                    {listing.bedrooms>0?`${listing.bedrooms} Bedrooms`:'0 Bedroom'}
                 </li>
                 <li>
-                    {listing.bathrooms>1?`${listing.bathrooms} Bathrooms`:'1 Bathroom'}
+                    {listing.bathrooms>0?`${listing.bathrooms} Bathrooms`:'0 Bathroom'}
                 </li>
                 {listing.parking&&(
                     <li>Parking available</li>

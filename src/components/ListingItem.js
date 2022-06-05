@@ -15,22 +15,22 @@ function ListingItem({listing, id, onDelete}) {
                 </p>
                 <p className="categoryListingName">{listing.name}</p>
                 <p className="categoryListingPrice">
-                &#8377; {listing.offer?listing.discountedPrice
+                 {listing.offer?listing.regularPrice -listing.discountedPrice
                     .toString()
                     .replace(/\B(?=(\d{3})+(?!\d))/g,',')
                     :listing.regularPrice
                     .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+                    .replace(/\B(?=(\d{3})+(?!\d))/g,',')}&#8364;
                     {listing.type==='rent'&&' / Month'}
                 </p>
                 <div className="categoryListingInfoDiv">
                     <img src={bedIcon} alt="bed" />
                     <p className="categoryListingInfoText">
-                        {listing.bedrooms>1? `${listing.bedrooms}bedrooms`: '1 Bedroom'}
+                        {listing.bedrooms>0? `${listing.bedrooms} bedrooms`: '0 Bedroom'}
                     </p>
                     <img src={bathtubIcon} alt='bath' />
                     <p className="categoryListingInfoText">
-                        {listing.bathrooms>1? `${listing.bathrooms}bathrooms`: '1 bathroom'}
+                        {listing.bathrooms>0? `${listing.bathrooms} bathrooms`: '0 bathroom'}
                     </p>
                 </div>
             </div>

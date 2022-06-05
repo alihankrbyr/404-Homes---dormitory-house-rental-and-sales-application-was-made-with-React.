@@ -45,7 +45,7 @@ function Slider() {
             <SwiperSlide key={id} onClick={()=>navigate(`/category/${data.type}/${id}`)}>
                 <div className="swiperSlideDiv" style={{background:`url(${data.imageUrls[0]}) center no-repeat`, backgroundSize:'cover'}}>
                     <p className="swiperSlideText">{data.name}</p>
-                    <p className="swiperSlidePrice">&#8377;{data.discountedPrice??data.regularPrice}{' '} {data.type==='rent' && '/month'}</p>
+                    <p className="swiperSlidePrice">{data.regularPrice-data.discountedPrice}&#8364;{' '} {data.type==='rent' && '/month'}</p>
                     </div>
                 </SwiperSlide>
             )

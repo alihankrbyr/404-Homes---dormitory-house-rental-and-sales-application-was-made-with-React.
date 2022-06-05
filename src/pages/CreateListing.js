@@ -190,7 +190,7 @@ function CreateListing() {
                             value={name}
                             onChange={onMutate}
                             maxLength='32'
-                            minLength='10'
+                            minLength='3'
                             required
                         />
 
@@ -203,7 +203,7 @@ function CreateListing() {
                                     id='bedrooms'
                                     value={bedrooms}
                                     onChange={onMutate}
-                                    min='1'
+                                    min='0'
                                     max='50'
                                     required
                                 />
@@ -216,7 +216,7 @@ function CreateListing() {
                                     id='bathrooms'
                                     value={bathrooms}
                                     onChange={onMutate}
-                                    min='1'
+                                    min='0'
                                     max='50'
                                     required
                                 />
@@ -342,7 +342,7 @@ function CreateListing() {
                                 id='regularPrice'
                                 value={regularPrice}
                                 onChange={onMutate}
-                                min='50'
+                                min='0'
                                 max='750000000'
                                 required
                             />
@@ -358,7 +358,7 @@ function CreateListing() {
                                     id='discountedPrice'
                                     value={discountedPrice}
                                     onChange={onMutate}
-                                    min='50'
+                                    min='0'
                                     max='750000000'
                                     required={offer}
                                 />
