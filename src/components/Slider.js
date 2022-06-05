@@ -40,7 +40,7 @@ function Slider() {
     }
   return (
     <>
-    {/* <p className="exploreHeading">Recommended</p> */} 
+    {/* <p className="exploreHeading">Recommended</p> */} {/*
     <Swiper slidesPerView={1} pagination={{clickable:true}}>
        
         {listing.map(({data, id})=>{
@@ -55,8 +55,8 @@ function Slider() {
             )
         })}
    
-        </Swiper> 
-        {/*  test for home page without api data  */} {/*}
+        </Swiper> */}
+        {/*  test for home page without api data  */}
         <Swiper> 
               <SwiperSlide>
                     <div className="swiperSlideDiv">
@@ -71,8 +71,7 @@ function Slider() {
                          
                     </div>
                 </SwiperSlide>
-                
-    </Swiper> */}
+        </Swiper>
     </>
   )
 }
