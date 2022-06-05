@@ -1,34 +1,74 @@
 import React,{useState, useEffect} from 'react'
-import axios from 'axios'
+import {collection, getDocs, query, where, orderBy, limit, startAfter} from 'firebase/firestore'
+import {db} from '../firebase.config'
 import {toast} from 'react-toastify'
 import Spinner from '../components/Spinner'
 import ListingItem from '../components/ListingItem'
 import {ReactComponent as Search1} from '../assets/svg/search.svg'
-import {ReactComponent as DeleteIcon} from '../assets/svg/deleteIcon.svg'
-import bedIcon from '../assets/svg/bedIcon.svg'
-import bathtubIcon from '../assets/svg/bathtubIcon.svg'
-import { Link } from 'react-router-dom'
+
 function Offers() {
-   
+    const [loading, setLoading] = useState(true)
+    const [listings, setListings] = useState(null)
+    const [lastListingFetched, setastListingFetched] = useState(null)
     const [searchTerm,setSearchTerm]=useState(' ')
   
-    const[posts,setPosts]=useState([])
-
-      useEffect(()=>{
-          axios
-          .get('http://localhost:3000/listings')
-          .then(res =>{
-              console.log(res)
-              setPosts(res.data)
-              
-          })
-          .catch(err=>{
-              console.log(err)
-          })
-      }
-      )
- 
     
+
+    useEffect(() => {
+      const fetchListings = async()=>{
+          try {
+              const listingsRef = collection(db, 'listings')
+              
+              const q = query(listingsRef, where('offer', '==', true), orderBy('timestamp', 'desc'), limit(3))
+            
+              const querySnap = await getDocs(q)
+                const lastListing = querySnap.docs[querySnap.docs.length-1]
+                setastListingFetched(lastListing)
+              
+              const listings = []
+              querySnap.forEach((doc)=>{
+                return listings.push({
+                    id: doc.id,
+                    data: doc.data()
+                })
+              })
+              setListings(listings)
+              setLoading(false)
+
+          } catch (error) {
+              console.log(error)
+              toast.error('Could not fetch Listings')
+          }
+      }
+    fetchListings()
+      
+    }, [])
+    
+    const onFetchMoreListings = async()=>{
+        try {
+            const listingsRef = collection(db, 'listings')
+            
+            const q = query(listingsRef, where('offer', '==', true), orderBy('timestamp', 'desc'),startAfter(lastListingFetched), limit(3))
+          
+            const querySnap = await getDocs(q)
+              const lastListing = querySnap.docs[querySnap.docs.length-1]
+              setastListingFetched(lastListing)
+            
+            const listings = []
+            querySnap.forEach((doc)=>{
+              return listings.push({
+                  id: doc.id,
+                  data: doc.data()
+              })
+            })
+            setListings((prevState)=>[...prevState,...listings])
+            setLoading(false)
+
+        } catch (error) {
+            console.log(error)
+            toast.error('Could not fetch Listings')
+        }
+    }
     
   return (
     <div className='category'>
@@ -36,85 +76,46 @@ function Offers() {
             <p className="pageHeader">
                 Offers
             </p>
+           
         </header>
-
-        <div class="wrap">
-    <div class="search">
-     
-      
-            <input class="searchTerm" type="text" placeholder="Search..." onChange={event =>setSearchTerm(event.target.value)}>
-            </input> <button type="submit" class="searchButton">
-        <i ><Search1></Search1></i>
-     </button>
-
-
-            <ul class="searchUl" >
+        
+        {loading?<Spinner/> : listings && listings.length>0?
+        <>
+        
+        <main>
             
-              
-                 {
-                 
-                 posts.filter((val => {
-                     if(searchTerm==" "){
-                         return val 
+            <ul className="categoryListings">
+                
+                {listings.map((listing)=>{
+                     return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
 
 
-                     }else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {return val}
 
-                     else if (val.type.toLowerCase().includes(searchTerm.toLowerCase())) {return val}
-                     
-                     else if (val.location.toLowerCase().includes(searchTerm.toLowerCase())) {return val}
-                     else if (val.userRef.toLowerCase().includes(searchTerm.toLowerCase())) {return val}
-                })).map((val, key )=>{
-                    return <div>
-                        
-                        <li className="categoryListing">
-        <Link to={`/category/${val.type}/`} className='categoryListingLink'>
-                       <img src={val.imageUrls} alt={val.name} className='categoryListingImg'/>
-            <div className="categoryListingDetails">
-                <p className="categoryListingLocation">
-                    {val.location}
-                </p>
-                <p className="categoryListingName">{val.name}</p>
-                <p className="categoryListingPrice">
-                &#8377; {val.offer?val.discountedPrice
-                    .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g,',')
-                    :val.regularPrice
-                    .toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g,',')}
-                    {val.type==='rent'&&' / Month'&&' Semester'}
-                </p>
-                <div className="categoryListingInfoDiv">
-                    <img src={bedIcon} alt="bed" />
-                    <p className="categoryListingInfoText">
-                        {val.bedrooms>1? `${val.bedrooms}bedrooms`: '1 Bedroom'}
-                    </p>
-                    <img src={bathtubIcon} alt='bath' />
-                    <p className="categoryListingInfoText">
-                        {val.bathrooms>1? `${val.bathrooms}bathrooms`: '1 bathroom'}
-                    </p>
-                </div>
-            </div>
-            </Link>
-      
-      </li>    </div>;
-                })}  
-               
 
+
+
+
+
+
+
+
+
+
+
+
+                })}
 
             </ul>
+        </main>
+        {lastListingFetched&&(
+            <p className="loadMore" onClick={onFetchMoreListings}>Load More</p>
             
-            
-     
-     
-     
-     </div>
+        )}
+        </>:<p>There are no offers</p>    
+    }
+    
     </div>
-
-
-
-      
-    </div>
+    
   )
 }
 
