@@ -25,6 +25,7 @@ button {
   border: none;
 }
 
+
 .input,
 .passwordInput,
 .emailInput,
@@ -300,11 +301,26 @@ button {
   .explore {
     margin-bottom: 10rem;
   }
+  .card2 {
+    width: 100%;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+  .card2 {
+    width: 100%;
+    margin-left: 25%;
+  }
 }
 @media (max-height: 536) {
   .explore {
     margin-bottom: 10rem;
   }
+
 }
 
 .exploreHeading,
