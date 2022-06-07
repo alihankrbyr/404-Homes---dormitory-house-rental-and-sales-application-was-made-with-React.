@@ -5,7 +5,9 @@ import {db} from '../firebase.config'
 import {toast} from 'react-toastify'
 import Spinner from '../components/Spinner'
 import ListingItem from '../components/ListingItem'
+import {ReactComponent as Search1} from '../assets/svg/search.svg'
 function Category() {
+    const [searchTerm,setSearchTerm]=useState(' ')
     const [loading, setLoading] = useState(true)
     const [lastListing, setLastListing] = useState(null)
     const [listings, setListings] = useState(null)
@@ -76,14 +78,37 @@ function Category() {
 params.categoryName==='sale'?'Places for Sale':
 params.categoryName==='dorm'?'Places for Dorm':'Something Wrong'}
             </p>
+            <div class="wrap">
+    <div class="search">
+            <input class="searchTerm" type="text" placeholder="Search..." onChange={event =>setSearchTerm(event.target.value)}>
+            </input> <button type="submit" class="searchButton">
+        <i ><Search1></Search1></i>
+     </button>
+     </div></div>
         </header>
         {loading?<Spinner/> : listings && listings.length>0?
         <>
         <main>
-            <ul className="categoryListings">
-                {listings.map((listing)=>{
-                     return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+        <ul className="categoryListings">
+ <ul class="searchUl" >
+                {listings.filter((listing=>{
+
+                    if(searchTerm==' '){
+                        return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+
+                    }
+                    else if (listing.data.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                     {
+                         return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                     
+                    } 
+                })).map((listing)=>{
+                
+                     return  <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                     
+                  
                 })}
+            </ul>
             </ul>
         </main>
         {lastListing&&(

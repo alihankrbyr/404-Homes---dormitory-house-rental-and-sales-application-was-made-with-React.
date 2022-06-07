@@ -4,10 +4,12 @@ import {db} from '../firebase.config'
 import {toast} from 'react-toastify'
 import Spinner from '../components/Spinner'
 import ListingItem from '../components/ListingItem'
-function Offers() {
+import {ReactComponent as Search1} from '../assets/svg/search.svg'
+function Offers() { const [searchTerm,setSearchTerm]=useState(' ')
     const [loading, setLoading] = useState(true)
     const [listings, setListings] = useState(null)
     const [lastListingFetched, setastListingFetched] = useState(null)
+   
     useEffect(() => {
       const fetchListings = async()=>{
           try {
@@ -28,6 +30,7 @@ function Offers() {
               })
               setListings(listings)
               setLoading(false)
+              
 
           } catch (error) {
               console.log(error)
@@ -35,7 +38,7 @@ function Offers() {
           }
       }
     fetchListings()
-      
+   
     }, [])
     
     const onFetchMoreListings = async()=>{
@@ -70,15 +73,42 @@ function Offers() {
             <p className="pageHeader">
                 Offers
             </p>
+            <div class="wrap">
+    <div class="search">
+            <input class="searchTerm" type="text" placeholder="Search..." onChange={event =>setSearchTerm(event.target.value)}>
+            </input> <button type="submit" class="searchButton">
+        <i ><Search1></Search1></i>
+     </button>
+     </div></div>
         </header>
+
         {loading?<Spinner/> : listings && listings.length>0?
         <>
         <main>
+
+     
             <ul className="categoryListings">
-                {listings.map((listing)=>{
-                     return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+ <ul class="searchUl" >
+                {listings.filter((listing=>{
+
+                    if(searchTerm==' '){
+                        return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+
+                    }
+                    else if (listing.data.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                     {
+                         return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                     
+                    } 
+                })).map((listing)=>{
+                
+                     return  <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                     
+                  
                 })}
             </ul>
+            </ul>
+
         </main>
         {lastListingFetched&&(
             <p className="loadMore" onClick={onFetchMoreListings}>Load More</p>
