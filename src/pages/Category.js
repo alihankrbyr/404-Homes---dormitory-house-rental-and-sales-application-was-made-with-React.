@@ -17,7 +17,7 @@ function Category() {
           try {
               const listingsRef = collection(db, 'listings')
               
-              const q = query(listingsRef, where('type', '==', params.categoryName), orderBy('timestamp', 'desc'), limit(3))
+              const q = query(listingsRef, where('type', '==', params.categoryName), orderBy('timestamp', 'desc'), limit(10))
             
               const querySnap = await getDocs(q)
               const lastListingVisible = querySnap.docs[querySnap.docs.length-1]
@@ -47,7 +47,7 @@ function Category() {
         try {
             const listingsRef = collection(db, 'listings')
             
-            const q = query(listingsRef, where('type', '==', params.categoryName), orderBy('timestamp', 'desc'),startAfter(lastListing), limit(3))
+            const q = query(listingsRef, where('type', '==', params.categoryName), orderBy('timestamp', 'desc'),startAfter(lastListing), limit(10))
           
             const querySnap = await getDocs(q)
             const lastListingVisible = querySnap.docs[querySnap.docs.length-1]

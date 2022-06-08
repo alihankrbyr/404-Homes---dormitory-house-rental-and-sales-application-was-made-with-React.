@@ -304,10 +304,45 @@ button {
   .card2 {
     width: 100%;
     margin-left: 10%;
+    
+    
   }
+  .listTacHeader{
+    width: 100%;
+    margin-left: 37%;
+  }
+ 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1217px) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+  .card2 {
+    width: 100%;
+    margin-left: 15%;
+  }
+  .listTacHeader{
+    width: 100%;
+    margin-left: 37%;
+  }
+  
+}
+@media (max-width: 1000px) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+  .card2 {
+    width:120%;
+    margin-left: 15%;
+  }
+  .listTacHeader{
+    width: 100%;
+    margin-left: 30%;
+  }
+  
+}
+@media (max-width: 600px ) {
   .explore {
     margin-bottom: 10rem;
   }
@@ -315,10 +350,26 @@ button {
     width: 100%;
     margin-left: 25%;
   }
+  .listTacHeader{
+    width: 100%;
+    margin-left: 10%;
+  }
+  
+ 
+  
 }
+
 @media (max-height: 536) {
   .explore {
     margin-bottom: 10rem;
+  }
+  .card2 {
+    width: 100%;
+    margin-left: 25%;
+  }
+  .listTacHeader{
+    width: 100%;
+    margin-left: 37%;
   }
 
 }
@@ -898,4 +949,24 @@ button {
       width: 100%;
       height: 100%;
     }
+  }
+  .card3{
+    width: 30%;
+   margin-left: 60%;
+   margin-top: 15%;
+    top: 50%;
+    position:relative;
+   
+    transform: translate(-50%, -50%);
+    
+  }
+  .card1{
+    width: 30%;
+   margin-left: 60%;
+   margin-top: 10%;
+    top: 50%;
+    position:relative;
+   
+    transform: translate(-50%, -50%);
+    
   }

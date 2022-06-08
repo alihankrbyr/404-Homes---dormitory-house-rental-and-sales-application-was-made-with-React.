@@ -1,27 +1,32 @@
 
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import { Card,CardImg,Row,Button,Col,Form} from 'react-bootstrap';
+import logo from '../assets/svg/logo2.jpg'
+import { Card,ListGroup} from 'react-bootstrap'
 import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 export default class ContactUs extends Component {
 
 
   render() {
     return (
-      <div className='category'>
-          <div className='center'>
-        <header>
-            <p className="pageHeader">
-            Contact Us 
-            </p>
-            <div className='ContactForm'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 text-center'>
-            <div className='contactForm'>
-              <form id='contact-form' noValidate>
+      <div className='categoryListingDetails'>
+        <header><center>
+            <p className="card2 pageHeader">
+            CONTACT US
+            </p></center>
+            <>
+            <Card className="card2" style={{align: 'center'}} >
+            <div align="center">
+            <img src={logo} style={{width: '10rem',marginLeft:"2rem"}} alt="404 Homes " />
+        </div>
+  <ListGroup as="ul">
+ 
+
+  
+
+  <Card.Header className='listTacHeader' style={{marginTop:'2rem',marginBottom:'1rem'}}>  <form id='contact-form' noValidate>
                 {/* Row 1 of form */}
-                <div className='row formRow'>
+                <div className=' formRow'>
                   <div className='col-6'>
                     <input
                       type='text'
@@ -62,24 +67,26 @@ export default class ContactUs extends Component {
                   </div>
                 </div>
                
-          <div className="signInBar">
+          <div className=" signInBar">
             <p className="signInText">Send Message</p>
-            <Link to='/profile' className='forgotPasswordLink' ><button className='signInButton'><ArrowRightIcon fill='white' width='45px' height='44px'/> </button></Link>
+            <Link to='/profile' style={{marginLeft:'20px'}} className='card2 forgotPasswordLink' ><button className='signInButton'><ArrowRightIcon fill='white' width='45px' height='44px'/> </button></Link>
           </div>
+          
         
         
         
                 
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </form></Card.Header>
+
+
+
+
+
+</ListGroup>
+</Card>
+</>
         </header>
-        </div>
+        
     </div>
     )
-  }
-}
-
+    }}
