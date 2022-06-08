@@ -29,15 +29,21 @@ function Contact() {
   return (
     <div className='pageContainer'>
         <header>
-            <p className="pageHeader">Contact {landLord?.name}</p>
+        <p className="pageHeader">Contact The Landlord</p>
+            
         </header>
         {landLord!==null &&(
             <main>
-                {/* <div className="contactLandLord">
+                 <div className="contactLandLord">
                     <p className="landLordName">
-                        Contact {landLord?.name}
+                   {" Name:"} {landLord?.name}
+                    
                     </p>
-                </div> */}
+                    <p className="landLordName">
+                    {" Email:"} {landLord?.email}
+                    
+                    </p>
+                </div> 
             <form className="messageForm">
                 <div className="messageDiv">
                     <label htmlFor="message" className='messageLabel'>

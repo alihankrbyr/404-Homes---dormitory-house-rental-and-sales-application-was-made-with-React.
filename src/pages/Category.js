@@ -92,16 +92,30 @@ params.categoryName==='dorm'?'Places for Dorm':'Something Wrong'}
         <ul className="categoryListings">
  <ul class="searchUl" >
                 {listings.filter((listing=>{
-
+{var reduced=(listing.data.regularPrice)}
                     if(searchTerm==' '){
                         return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
 
                     }
                     else if (listing.data.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                    
                      {
                          return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
                      
                     } 
+                    else if (listing.data.location.toLowerCase().includes(searchTerm.toLowerCase()))
+                    
+                    {
+                        return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                    
+                   } 
+                   else if ((reduced).toLowerCase().includes(searchTerm.toLowerCase()))
+                    
+                   {
+                       return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
+                   
+                  } 
+                 
                 })).map((listing)=>{
                 
                      return  <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
