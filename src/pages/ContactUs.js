@@ -17,7 +17,7 @@ export default class ContactUs extends Component {
             <>
             <Card className="card2" style={{align: 'center'}} >
             <div align="center">
-            <img src={logo} style={{width: '10rem',marginLeft:"2rem"}} alt="404 Homes " />
+            <img src={logo} style={{width: '10rem',marginLeft:'-2%'}} alt="404 Homes " />
         </div>
   <ListGroup as="ul">
  
