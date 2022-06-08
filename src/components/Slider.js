@@ -16,7 +16,7 @@ function Slider() {
     useEffect(() => {
         const fetchListings =async()=>{
             const listingRef = collection(db, 'listings' )
-            const q = query(listingRef, orderBy('timestamp', 'desc'), limit(10))
+            const q = query(listingRef, orderBy('timestamp','desc'), limit(10))
             const snap = await getDocs(q)
             let listings = []
             snap.forEach((doc)=>{
@@ -45,7 +45,10 @@ function Slider() {
             <SwiperSlide key={id} onClick={()=>navigate(`/category/${data.type}/${id}`)}>
                 <div className="swiperSlideDiv" style={{background:`url(${data.imageUrls[0]}) center no-repeat`, backgroundSize:'cover'}}>
                     <p className="swiperSlideText">{data.name}</p>
-                    <p className="swiperSlidePrice">{data.regularPrice-data.discountedPrice}&#8364;{' '} {data.type==='rent' && '/month'}</p>
+                    <p className="swiperSlidePrice">{
+                        data.offer ? data.regularPrice-data.discountedPrice  :
+                        data.offer ? data.regularPrice:data.regularPrice}&#8364;{' '} {data.type==='rent' && '/month'}</p>
+                   
                     </div>
                 </SwiperSlide>
             )

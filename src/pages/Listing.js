@@ -8,6 +8,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import Spinner from '../components/Spinner'
 import shareIcon from '../assets/svg/shareIcon.svg'
+import location  from '../assets/svg/location.svg'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 function Listing() {
@@ -57,7 +58,7 @@ if(loading){
         {sharedLinkCopied && <p className='linkCopied'>Link Copied!</p>}
         <div className="listingDetails">
             <p className="listingName">
-                {listing.name}- {listing.offer? listing.regularPrice - listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
+                {listing.name}-{""} {listing.offer ? (listing.regularPrice-listing.discountedPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
                     :listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')} &#8364;
             </p>
             <p className="listingLocation">
@@ -70,7 +71,7 @@ if(loading){
            
 
             {listing.offer &&(
-                <p className='Regular Price'>{' Regular Price -'}{listing.regularPrice}&#8364; <br></br>{'Discounted Price - '} {listing.discountedPrice}&#8364; </p>
+                <p className='Regular Price'>{' Regular Price -'}{listing.regularPrice}&#8364; <br></br>{'Reduced  Price -'} {listing.discountedPrice}&#8364; </p>
                 
                 
                 
@@ -88,6 +89,11 @@ if(loading){
                 {listing.parking&&(
                     <li>Furnished</li>
                 )}
+                <img style={{marginLeft:"-2rem"}}  src={location} alt='location' />
+                    
+                        {listing.location}
+                    
+                
             </ul>
             {/* <p className="listingLocationTitle">Location on map</p>
             <div className="leafletContainer">
