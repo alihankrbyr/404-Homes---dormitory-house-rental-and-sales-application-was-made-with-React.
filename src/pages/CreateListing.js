@@ -19,8 +19,8 @@ function CreateListing() {
         furnished: false,
         address: '',
         offer: false,
-        regularPrice: 0,
-        discountedPrice: 0,
+        regularPrice: 1,
+        discountedPrice: 1,
         images: {},
         latitude: 0,
         longitude: 0
@@ -342,11 +342,11 @@ function CreateListing() {
                                 id='regularPrice'
                                 value={regularPrice}
                                 onChange={onMutate}
-                                min='0'
+                                min='1'
                                 max='750000000'
                                 required
                             />
-                            {type === 'rent' && <p className='formPriceText'>Rs / Month</p>}
+                            {type === 'rent' && <p className='formPriceText'>€ / Month</p>}
                         </div>
 
                         {offer && (
@@ -358,9 +358,10 @@ function CreateListing() {
                                     id='discountedPrice'
                                     value={discountedPrice}
                                     onChange={onMutate}
-                                    min='0'
+                                    min='1'
                                     max='750000000'
                                     required={offer}
+                                    
                                 />
                             </>
                         )}

@@ -92,7 +92,7 @@ params.categoryName==='dorm'?'Places for Dorm':'Something Wrong'}
         <ul className="categoryListings">
  <ul class="searchUl" >
                 {listings.filter((listing=>{
-{var reduced=(listing.data.regularPrice)}
+{var reduced=(listing.data.regularPrice-listing.data.discountedPrice)}
                     if(searchTerm==' '){
                         return <ListingItem listing={listing.data} id={listing.id} key={listing.id}/>
 

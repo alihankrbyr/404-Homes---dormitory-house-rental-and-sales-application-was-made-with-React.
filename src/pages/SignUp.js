@@ -42,7 +42,7 @@ function SignUp() {
 
     } catch (error) {
       console.log(error)
-      toast.error("Something went wrong with the registration")
+      toast.error("password must be minimum 6 characters or this email is already registered")
     }
   }
 
