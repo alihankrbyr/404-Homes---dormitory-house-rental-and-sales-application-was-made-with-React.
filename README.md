@@ -1,16 +1,15 @@
-	EXPLORE PAGE
+EXPLORE PAGE
 
-![image](https://user-images.githubusercontent.com/45005048/190361298-94e1d24e-9def-4d32-8637-5a97d9e39a14.png)
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/45005048/190362415-027128d7-ccab-4a63-aeb7-a65fb1258c2b.png">
 
+<img width="265" alt="image" src="https://user-images.githubusercontent.com/45005048/190362437-5ae0f29d-855a-4a77-b7df-f225e597a1d8.png">
 
-![image](https://user-images.githubusercontent.com/45005048/190361327-ee0b58f1-35a3-4b70-ad10-7711599579f0.png)
+OFFER PAGE
 
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/45005048/190362473-d1e8c882-c85a-4fa1-a9fe-2aa6efdc3ba3.png">
 
-	OFFER PAGE
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/45005048/190362525-2e3999b3-7e14-4e8a-9a43-4a4d4f9ef4e9.png">
 
-![image](https://user-images.githubusercontent.com/45005048/190361360-6cdc6ea2-b546-4e51-90a0-502b05d97c5b.png)
-
-![image](https://user-images.githubusercontent.com/45005048/190361412-f2c9dd02-65a7-4cc5-883c-aee5501c16b7.png)
 
 RENT PAGE
 
@@ -22,7 +21,6 @@ SALE PAGE
 
 <img width="537" alt="image" src="https://user-images.githubusercontent.com/45005048/190361672-4280ed75-92dd-4afa-a918-0f352ee39d51.png">
 
-
 <img width="270" alt="image" src="https://user-images.githubusercontent.com/45005048/190361683-430e2f2d-4c9d-4e27-b406-d1aa410485eb.png">
 
 DORM PAGE
@@ -31,43 +29,42 @@ DORM PAGE
 
 <img width="322" alt="image" src="https://user-images.githubusercontent.com/45005048/190361873-4d643c8a-c007-4a2e-8054-3e4cdff3bfb8.png">
 
-
 CONTACT US
 
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/45005048/190361924-9ee85c86-e12b-4908-a2c1-8bdf8a9bd74b.png">
 
-
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/45005048/190361955-ab6421d9-14d6-4f53-9c97-61608bb1b95e.png">
-
-
-
-
 
 login Page
  
-![image](https://user-images.githubusercontent.com/45005048/190352531-25995813-91fd-480b-90b3-d90326b49f38.png)
+<img width="536" alt="image" src="https://user-images.githubusercontent.com/45005048/190362731-2e2523e1-8c57-4a0a-a891-b0859f64958d.png">
+
+<img width="217" alt="image" src="https://user-images.githubusercontent.com/45005048/190362759-ab6668bd-728c-440f-85ac-ea32440f1f94.png">
 
 
 Register Page
  
-![image](https://user-images.githubusercontent.com/45005048/190352827-1cf013fb-f231-4ca8-9ca6-2dd6adf0a580.png)
+<img width="471" alt="image" src="https://user-images.githubusercontent.com/45005048/190362784-e731c73c-776c-4b6d-a5ba-847a2caca56f.png">
+
+<img width="276" alt="image" src="https://user-images.githubusercontent.com/45005048/190362802-c3684dd8-da0f-44d4-8b96-b62717040e5f.png">
+
 
 Forgot Password Page
  
-![image](https://user-images.githubusercontent.com/45005048/190352849-a621b648-f15f-4976-bed3-b11f89770f97.png)
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/45005048/190362855-6c0c58d0-82a8-4292-8b55-255facec9185.png">
 
+<img width="214" alt="image" src="https://user-images.githubusercontent.com/45005048/190362873-6ad7e34b-da01-4925-a4d9-aa96738b277b.png">
 
 Profile Dasboard Page
 
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/45005048/190362911-d86a946d-2745-4692-ad67-d349f7151ab2.png">
 
-![image](https://user-images.githubusercontent.com/45005048/190352902-8fee5be1-cd85-4905-9aaa-f0d5acbf9099.png)
+<img width="242" alt="image" src="https://user-images.githubusercontent.com/45005048/190362953-f8e2d73e-d658-46f8-8949-b6b30052ccab.png">
 
 
 Terms of Use Agreement Page
 
-
-![image](https://user-images.githubusercontent.com/45005048/190352949-9898d27f-7081-48d2-b5ed-4db7183af8ec.png)
-
+<img width="531" alt="image" src="https://user-images.githubusercontent.com/45005048/190362986-fd85860b-d8b2-40b7-a07c-4b52b000a957.png">
 
 
 ACTİVİTY DİAGRAM:
