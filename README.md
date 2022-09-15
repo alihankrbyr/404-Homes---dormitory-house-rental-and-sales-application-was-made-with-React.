@@ -1,11 +1,47 @@
-DataBase
+	EXPLORE PAGE
+
+![image](https://user-images.githubusercontent.com/45005048/190361298-94e1d24e-9def-4d32-8637-5a97d9e39a14.png)
 
 
-<img width="505" alt="image" src="https://user-images.githubusercontent.com/45005048/190352410-c01c88bd-2cdb-4a88-b311-11259af999f1.png">
-<img width="543" alt="image" src="https://user-images.githubusercontent.com/45005048/190352459-4d321cbb-acfd-436e-bdcd-4425db920113.png">
+![image](https://user-images.githubusercontent.com/45005048/190361327-ee0b58f1-35a3-4b70-ad10-7711599579f0.png)
 
 
-GUI- Part
+	OFFER PAGE
+
+![image](https://user-images.githubusercontent.com/45005048/190361360-6cdc6ea2-b546-4e51-90a0-502b05d97c5b.png)
+
+![image](https://user-images.githubusercontent.com/45005048/190361412-f2c9dd02-65a7-4cc5-883c-aee5501c16b7.png)
+
+RENT PAGE
+
+<img width="503" alt="image" src="https://user-images.githubusercontent.com/45005048/190361564-e99ed2e3-cea2-4606-959b-9e4e33e2cfb8.png">
+
+<img width="270" alt="image" src="https://user-images.githubusercontent.com/45005048/190361584-160dcb8d-b6f4-49be-a06e-a292d32b33b6.png">
+
+SALE PAGE
+
+<img width="537" alt="image" src="https://user-images.githubusercontent.com/45005048/190361672-4280ed75-92dd-4afa-a918-0f352ee39d51.png">
+
+
+<img width="270" alt="image" src="https://user-images.githubusercontent.com/45005048/190361683-430e2f2d-4c9d-4e27-b406-d1aa410485eb.png">
+
+DORM PAGE
+
+<img width="524" alt="image" src="https://user-images.githubusercontent.com/45005048/190361857-4fa8d3af-3a53-40e9-8bdb-ece20d3b3536.png">
+
+<img width="322" alt="image" src="https://user-images.githubusercontent.com/45005048/190361873-4d643c8a-c007-4a2e-8054-3e4cdff3bfb8.png">
+
+
+CONTACT US
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/45005048/190361924-9ee85c86-e12b-4908-a2c1-8bdf8a9bd74b.png">
+
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/45005048/190361955-ab6421d9-14d6-4f53-9c97-61608bb1b95e.png">
+
+
+
+
 
 login Page
  
